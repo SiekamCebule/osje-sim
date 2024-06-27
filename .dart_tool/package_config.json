@@ -305,10 +305,10 @@
       "name": "osje_sim",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "3.5"
+      "languageVersion": "3.4"
     }
   ],
-  "generated": "2024-06-27T08:31:22.650602Z",
+  "generated": "2024-06-27T12:56:34.658326Z",
   "generator": "pub",
   "generatorVersion": "3.5.0-272.0.dev",
   "flutterRoot": "file:///home/konrad/programming-tools/flutter",
