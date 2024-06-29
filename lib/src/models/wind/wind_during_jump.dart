@@ -1,5 +1,7 @@
+import 'package:json_annotation/json_annotation.dart';
 import 'package:osje_sim/src/models/wind/wind.dart';
 
+@JsonSerializable()
 class WindDuringJump {
   WindDuringJump() : winds = {};
 

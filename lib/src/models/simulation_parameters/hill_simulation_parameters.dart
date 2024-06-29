@@ -1,5 +1,7 @@
+import 'package:json_annotation/json_annotation.dart';
 import 'package:osje_sim/src/enums/landing_safety.dart';
 
+@JsonSerializable()
 class HillSimulationParameters {
   const HillSimulationParameters({
     required this.xFactor,

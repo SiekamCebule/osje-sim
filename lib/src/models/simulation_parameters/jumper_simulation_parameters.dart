@@ -1,7 +1,9 @@
+import 'package:json_annotation/json_annotation.dart';
 import 'package:osje_sim/src/enums/jumps_consistency.dart';
 import 'package:osje_sim/src/enums/landing_style.dart';
 
 /// A set of parameters used by [OsjeJumpSimulator] to describe the jumper's skills.
+@JsonSerializable()
 class JumperSimulationParameters {
   const JumperSimulationParameters({
     required this.xSkill,

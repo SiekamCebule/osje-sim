@@ -1,9 +1,17 @@
 import 'package:osje_sim/src/models/wind/degrees.dart';
+import 'package:json_annotation/json_annotation.dart';
 
 enum WindGeneralDirection {
+  @JsonValue('head')
   headwind,
+
+  @JsonValue('tail')
   tailwind,
+
+  @JsonValue('westCross')
   westCrosswind, // zachodni
+
+  @JsonValue('eastCross')
   eastCrosswind;
 
   static WindGeneralDirection fromDegrees(Degrees degrees) {
