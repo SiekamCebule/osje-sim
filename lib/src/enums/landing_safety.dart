@@ -8,7 +8,7 @@ enum LandingSafety {
   safely,
 
   @JsonValue(0)
-  moderatelySafely,
+  average,
 
   @JsonValue(-1)
   unsafely,
