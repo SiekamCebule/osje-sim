@@ -11,7 +11,7 @@ enum JumpsConsistency {
   average,
 
   @JsonValue(-1)
-  inconsitent,
+  inconsistent,
 
   @JsonValue(-2)
   veryInconsistent,
