@@ -1,6 +1,4 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:osje_sim/src/enums/jumps_consistency.dart';
-import 'package:osje_sim/src/enums/landing_style.dart';
 
 /// A set of parameters used by [OsjeJumpSimulator] to describe the jumper's skills.
 @JsonSerializable()
@@ -20,10 +18,10 @@ class JumperSimulationParameters {
   final double ySkill;
 
   /// How graceful the jumper lands.
-  final LandingStyle landingStyle;
+  final double landingStyle;
 
   /// How consistent the jumper's jumps are.
-  final JumpsConsistency jumpsConsistency;
+  final double jumpsConsistency;
 
   /// We can think of it as a kind of multiplier of xSkill and ySkill, which also gives a small bonus for other parameters.
   final double form;

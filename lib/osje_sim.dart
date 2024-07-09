@@ -1,8 +1,5 @@
 library;
 
-export 'src/enums/jumps_consistency.dart';
-export 'src/enums/landing_safety.dart';
-export 'src/enums/landing_style.dart';
 export 'src/enums/landing_type.dart';
 export 'src/enums/wind_general_direction.dart';
 
