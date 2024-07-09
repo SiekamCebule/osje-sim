@@ -1,5 +1,4 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:osje_sim/src/enums/landing_safety.dart';
 
 @JsonSerializable()
 class HillSimulationParameters {
@@ -7,19 +6,25 @@ class HillSimulationParameters {
     required this.xFactor,
     required this.yFactor,
     required this.k,
-    required this.hs,
-    required this.safetyAtHs,
+    required this.realHs,
+    required this.profileFactor,
+    required this.variabilityFactor,
   });
 
-  /// Calculates distance by multiplying [JumperSimulationParmeters.xSkill] by [xFactor].
   final double xFactor;
 
-  /// Calculates distance by multiplying [JumperSimulationParmeters.ySkill] by [yFactor].
   final double yFactor;
 
   final double k;
-  final double hs;
 
-  /// How safely are jumps at the distance of hill size. It's used to find a point, where jumps become unsafe.
-  final LandingSafety safetyAtHs;
+  /// It's a realHs, like 245 for Vikersund HS225
+  final double realHs;
+
+  /// Negative values favor weaker in-flight and positive values favor better in-flight
+  ///
+  /// For instance, value of 1.02 multiplies jumper's x by 0.98 and y by 1.02
+  final double profileFactor;
+
+  /// For instance, value of 1.27 increases the random's range to 12.7 from 10.0 meters
+  final double variabilityFactor;
 }
