@@ -9,5 +9,6 @@ extension type Degrees(int value) {
     return Degrees(int.parse(json));
   }
 
-  String toJson() => value.toString();
+  String toJson() => staticToJson(this);
+  static String staticToJson(Degrees? degrees) => degrees?.toString() ?? '';
 }
