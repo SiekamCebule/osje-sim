@@ -15,7 +15,7 @@ enum WindGeneralDirection {
   eastCrosswind;
 
   static WindGeneralDirection fromDegrees(Degrees degrees) {
-    int deg = degrees.value;
+    double deg = degrees.value;
 
     if ((deg >= 315 && deg <= 360) || (deg >= 0 && deg < 45)) {
       return WindGeneralDirection.headwind;
@@ -31,7 +31,7 @@ enum WindGeneralDirection {
   }
 
   Degrees toDegrees() {
-    int degrees = switch (this) {
+    double degrees = switch (this) {
       WindGeneralDirection.headwind => 0,
       WindGeneralDirection.tailwind => 180,
       WindGeneralDirection.westCrosswind => 270,
