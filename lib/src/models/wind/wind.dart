@@ -1,9 +1,10 @@
+import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:osje_sim/src/enums/wind_general_direction.dart';
 import 'package:osje_sim/src/models/wind/degrees.dart';
 
 @JsonSerializable()
-class Wind {
+class Wind with EquatableMixin {
   const Wind({
     required this.direction,
     required this.strength,
@@ -21,5 +22,16 @@ class Wind {
     } else {
       throw TypeError();
     }
+  }
+
+  @override
+  List<Object?> get props => [
+        direction,
+        strength,
+      ];
+
+  @override
+  String toString() {
+    return 'Wind(direction: $direction, strength: $strength)';
   }
 }
